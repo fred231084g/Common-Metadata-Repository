@@ -15,7 +15,7 @@ cat <<EOF > Dockerfile
 FROM node:16
 COPY . /build
 WORKDIR /build
-RUN npm ci --production
+RUN npm install --package-lock-only --ignore-scripts && npx npm-force-resolutions
 EOF
 
 dockerTag=cmr-graph-db-$bamboo_ENVIRONMENT
