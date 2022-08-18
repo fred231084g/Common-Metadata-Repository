@@ -16,6 +16,7 @@ FROM node:16
 COPY . /build
 WORKDIR /build
 RUN npm install --package-lock-only --ignore-scripts && npx npm-force-resolutions
+RUN npx serverless plugin install -n serverless-offline
 EOF
 
 dockerTag=cmr-graph-db-$bamboo_ENVIRONMENT
