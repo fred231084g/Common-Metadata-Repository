@@ -56,7 +56,6 @@
     "snyk": "^1.782.0"
   },
   "resolutions": {
-    "file-type": "16.5.4",
-    "node-fetch": "3.2.10"
+    "file-type": "16.5.4"
   }
 }
